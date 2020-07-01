@@ -1,0 +1,233 @@
+/* header code */
+
+.header {
+    margin-top: 20px;
+    .header__top {
+        display: flex;
+        justify-content: space-between;
+        .header__logo-anchor {
+            color: #DA4CC0;
+            text-decoration: none;
+            img {
+                @include breakpoint(portrait-mobile-max) {
+                    max-width: 86%;
+                    height: 86%;
+                }
+            }
+        }
+        .header__search-box {
+            max-width: 202px;
+            width: 100%;
+            position: relative;
+        }
+        .header__search-box-btn {
+            position: absolute;
+            right: 0;
+            color: #A5A5A5;
+        }
+        .header__link-box .btn {
+            border: 1px solid transparent;
+            background-color: transparent;
+            display: inline-block;
+            padding: 0px 10px 0px 10px;
+            transition: all 0.3s ease;
+        }
+        .search-textbox {
+            padding: 0px 40px 0px 10px;
+            width: 100%;
+            border: 1px solid #01010129;
+            opacity: 1;
+        }
+        .quick-links {
+            margin-left: -10px;
+            margin-top: 1rem;
+            list-style-type: none;
+            display: flex;
+        }
+        .quick-links li {
+            position: relative;
+        }
+        .quick-links li:after {
+            content: "/";
+            position: absolute;
+            left: -2px;
+            color: #a5a5a5;
+            top: 50%;
+            transform: translateY(-50%);
+            @include fontSize(20px);
+        }
+        .quick-links li:first-child:after {
+            content: "";
+        }
+        .quick-links li a {
+            padding: 5px 10px;
+            display: block;
+            color: #a5a5a5;
+            @include fontSize(20px);
+            font-family: KozGoPro-Light;
+        }
+    }
+    .header__bottom {
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.5);
+        margin-top: 1rem;
+        @include breakpoint(mobile-max) {
+            padding-bottom: 4px;
+        }
+        .navbar {
+            flex-direction: row-reverse;
+        }
+        .nav-list {
+            display: flex;
+            list-style-type: none;
+            @include breakpoint(mobile-max) {
+                flex-direction: column;
+                width: 100%;
+            }
+            li {
+                a {
+                    color: #222;
+                    padding: 10px;
+                    font-family: KozGoPro-Light;
+                    @include fontSize(15px);
+                    text-decoration: none;
+                    @include breakpoint(mobile-max) {
+                        text-transform: uppercase;
+                    }
+                    &:hover {
+                        color: #AA3795;
+                        transition: all 0.5s ease;
+                        @include transition(all, 0.5s, ease);
+                    }
+                    &.active {
+                        color: #AA3795;
+                    }
+                }
+                &:first-child a {
+                    padding-left: 0px;
+                    @include breakpoint(mobile-max) {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+        .my-bag {
+            font-family: KozGoPro-Light;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            color: #222;
+            text-transform: uppercase;
+            &:hover {
+                color: #DA4CC0;
+            }
+        }
+    }
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+// CODE FOR HAMBUGER MENU
+
+/* code For Hamburger menu in mobile screen */
+
+.navbar--style-mob ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.navbar--style-mob {
+    li {
+        @include breakpoint(ipad-min) {
+            float: left;
+        }
+        a {
+            display: block;
+            padding: 20px 20px;
+            text-decoration: none;
+            @include breakpoint(mobile-max) {
+                padding: 20px 30px;
+            }
+        }
+    }
+    .logo {
+        display: block;
+        float: left;
+        text-decoration: none;
+    }
+    .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        @include breakpoint(ipad-min) {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+    }
+    /* menu icon */
+    .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 14px 20px;
+        position: relative;
+        user-select: none;
+        background-color: rgba(218, 76, 192, 0.50);
+        @include breakpoint(ipad-min) {
+            display: none;
+        }
+    }
+    .menu-icon .navicon {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    .menu-icon .navicon:before {
+        top: 5px;
+    }
+    .menu-icon .navicon:after {
+        top: -5px;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .menu-btn:checked~.menu {
+        max-height: 240px;
+    }
+    .menu-btn:checked~.menu-icon .navicon {
+        background: transparent;
+    }
+    .menu-btn:checked~.menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    .menu-btn:checked~.menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+    .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+    .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Just BEM with Gulp</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Normal CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Minified CSS -->
+    <!-- <link rel="stylesheet" href="css/bundle.min.css"> -->
+
+</head>
+
+<body>
+
+    <!-- header start -->
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__logo">
+                    <a href="./index.html" alt="logo" class="header__logo-anchor">
+                        <img src="./images/logo.png" alt="logo" class="img-fluid"></a>
+                </div>
+                <div class="header__link-box">
+                    <div class="header__search-box">
+                        <form action="">
+                            <input type="text" class="form-input search-textbox" placeholder="search">
+                            <button type="search" class="btn header__search-box-btn">
+                                <span class="icon-Forma-1"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <ul class="quick-links">
+                        <li>
+                            <a class="link-hover" href="javascript:void(0);">Login</a>
+                        </li>
+                        <li>
+                            <a class="link-hover" href="javascript:void(0);">Register</a>
+                        </li>
+                        <li>
+                            <a class="link-hover" href="javascript:void(0);">Subscribe</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <nav class="navbar navbar--style-mob">
+                    <a href="javascript:void(0);" class="my-bag logo">
+                        <span class="icon-bag"></span> My Bag (0)
+                    </a>
+                    <input class="menu-btn" type="checkbox" id="menu-btn" />
+                    <label class="menu-icon" for="menu-btn"> 
+                        <span class="navicon"></span>
+                   </label>
+                    <!-- ul .nav-list -->
+                    <ul class="menu nav-list">
+                        <li>
+                            <a href="javascript:void(0)" class="active">Home</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">About Us</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Clothing</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Accessories</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Baby Area</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- main start -->
+
+    <main class="main-content">
+        <div class="container">
+            <section class="banner-section">
+                <div class="baaner-section__img-box">
+                    <img class="img-fluid" src="./images/banner-img.jpg" alt="banner-img">
+                </div>
+                <div class="banner-section__caption-left">
+                    <div class="banner-section__caption-lbl">
+                        <span>Crazy</span>
+                    </div>
+                    <h2 class="banner-section__caption-title">Crazy Summer</h2>
+                    <h4 class="banner-section__caption-subtitle">
+                        <span>Woman Collection</span>
+                    </h4>
+                    <a href="javascript:void(0);" class="show-me-btn">Show Now</a>
+
+                </div>
+                <div class="banner-section__punch-line">"live your life be free"</div>
+            </section>
+            <section class="collection">
+                <div class="collection-top">
+                    <h2 class="collection-top__heading"><span>NEW COLLECTION</span></h2>
+                    <a href="javascript:void(0);" class="shop-all-btn">Shop All Styles</a>
+                </div>
+                <div class="collection-bottom">
+                    <ul class="collection-product-grid">
+                        <li>
+                            <a href="javascript:void(0)"><img class="img-fluid" src="./images/collection-img-1.png" alt="product-1"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><img class="img-fluid" src="./images/collection-img-2.png" alt="product-2"></a>
+                            <a href="javascript:void(0)"><img class="img-fluid" src="./images/collection-img-3.png" alt="product-3"></a>
+
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><img class="img-fluid" src="./images/collection-img-4.png" alt="product-4"></a>
+                            <a href="javascript:void(0)"><img class="img-fluid" src="./images/collection-img-5.png" alt="product-5"></a>
+
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><img class="img-fluid" src="./images/collection-img-6.png" alt="product-6"></a>
+                            <a href="javascript:void(0)"><img class="img-fluid" src="./images/collection-img-7.png" alt="product-7"></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer__service_lists">
+                <li>
+                    <span class="service-icon"><img src="./images/trasasaction-img.png" alt="tranasction-img"></span>Secured Transaction
+                </li>
+                <li>
+                    <span class="service-icon"><img src="./images/shipping-img.png" alt="shipping-img"></span>Secured Transaction
+                </li>
+                <li>
+                    <span class="service-icon"><img src="./images/track-ship-img.png" alt="trackship-img"></span>Secured Transaction
+                </li>
+
+            </ul>
+            <div class="footer__col-grid-lists">
+                <div class="footer__col-grid --margin-right">
+                    <h3 class="footer__title">Account</h3>
+                    <ul class="footer-menu-lists">
+                        <li>
+                            <a href="">Login</a>
+                        </li>
+                        <li>
+                            <a href="">Sign-up</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col-grid">
+                    <h3 class="footer__title">Subscribe</h3>
+                    <div class="subscribe-us-box">
+                        <input type="email" class="form-input" placeholder="your@email.com">
+                        <button type="button" class="go-btn">Go</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="copy-right">
+                    <ul class="copy-right-lists">
+                        <li>@2020 All Rights Reserved</li>
+                        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="ship-to">
+                    <label for="" class="ship-to-lbl">SHIP TO</label>
+                    <div class="change-country-name">
+                        <span class="change-flag-name">
+                            <img src="./images/singapore-flag.png" alt="singapore-flag">
+                        </span> SINGAPORE
+                    </div>
+                    <a href="javascript:void(0)">change</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- Normal JS -->
+<script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="js/browser-class.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Minified Combine JS -->
+<!-- <script src="js/bundle.min.js"></script> -->
+
+</html>
